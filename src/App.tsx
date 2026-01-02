@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingScreen from "@/components/LoadingScreen";
+import Chatbot from "@/components/Chatbot";
 import Index from "./pages/Index";
 import AboutPage from "./pages/AboutPage";
 import FormationsPage from "./pages/FormationsPage";
@@ -12,6 +13,9 @@ import ContactPage from "./pages/ContactPage";
 import ActualitesPage from "./pages/ActualitesPage";
 import InscriptionPage from "./pages/InscriptionPage";
 import DevisPage from "./pages/DevisPage";
+import FAQPage from "./pages/FAQPage";
+import OrientationTestPage from "./pages/OrientationTestPage";
+import GalleryPage from "./pages/GalleryPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,9 +39,12 @@ const App = () => {
             <Route path="/inscription" element={<InscriptionPage />} />
             <Route path="/devis" element={<DevisPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/test-orientation" element={<OrientationTestPage />} />
+            <Route path="/galerie" element={<GalleryPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Chatbot />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
