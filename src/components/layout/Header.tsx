@@ -80,7 +80,7 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="ghost" asChild>
-              <Link to="/contact">Demander un devis</Link>
+              <Link to="/devis">Demander un devis</Link>
             </Button>
             <Button variant="accent" asChild>
               <Link to="/inscription">S'inscrire</Link>
@@ -135,7 +135,7 @@ const Header = () => {
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
                 <Button variant="outline" asChild className="w-full">
-                  <Link to="/contact">Demander un devis</Link>
+                  <Link to="/devis">Demander un devis</Link>
                 </Button>
                 <Button variant="accent" asChild className="w-full">
                   <Link to="/inscription">S'inscrire</Link>
